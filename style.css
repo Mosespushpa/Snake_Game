@@ -1,0 +1,81 @@
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: monospace;
+}
+
+#game-container {
+    position: relative;
+}
+
+#gameCanvas {
+    border: 5px solid #fff;
+    background-color: #000;
+}
+
+/* Styling for the new start menu */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.overlay h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+/* New: Styling for color selection */
+#color-options {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+/* Hide the actual radio buttons */
+#color-options input[type="radio"] {
+    display: none;
+}
+
+/* Style the labels (the visible buttons) */
+.color-label {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white; /* Default text color for dark colors */
+    text-shadow: 0 0 3px black; /* For better contrast on light colors */
+    transition: transform 0.1s;
+}
+
+/* Highlight the selected color */
+#color-options input[type="radio"]:checked + .color-label {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px white;
+    border: 3px solid white !important; /* Make sure the border is visible on white snake */
+}
+
+
+#start-button {
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}

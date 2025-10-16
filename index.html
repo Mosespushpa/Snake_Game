@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="580" height="580"></canvas>
+
+        <div id="start-menu" class="overlay">
+            <h1>SNAKE GAME</h1>
+            <p>Choose Your Snake Color:</p>
+            
+            <div id="color-options">
+                <input type="radio" id="color-green" name="snake_color" value="#4CAF50" checked>
+                <label for="color-green" class="color-label" style="background-color: #4CAF50;">Green</label>
+
+                <input type="radio" id="color-blue" name="snake_color" value="#2196F3">
+                <label for="color-blue" class="color-label" style="background-color: #2196F3;">Blue</label>
+
+                <input type="radio" id="color-yellow" name="snake_color" value="#FFEB3B">
+                <label for="color-yellow" class="color-label" style="color: #000; background-color: #FFEB3B;">Yellow</label>
+
+                <input type="radio" id="color-white" name="snake_color" value="#FFFFFF">
+                <label for="color-white" class="color-label" style="color: #000; border: 1px solid #333; background-color: #FFFFFF;">White</label>
+            </div>
+            
+            <button id="start-button">Start Game</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
